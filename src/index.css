@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "SohneBreit-Buch";
+  src: url("./fonts/SohneBreitBuch.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "SohneBreit-Buch", sans-serif;
+}
