@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "./Button";
+import { Link } from "react-router-dom";
+import "./navbar.css";
+import Logo from "../../assets/goprologo.svg";
 
 function Navbar() {
   return (
-    <div>
-      <h1>Hello</h1>
-      <p>Hey How Are you</p>
-      <h5> is it working?</h5>
-    </div>
+    <>
+      <nav className="navbar">
+        <Link to="/" className="navbar-logo">
+          <img src={Logo} alt="GoPro Logo" />
+        </Link>
+      </nav>
+    </>
   );
 }
 
