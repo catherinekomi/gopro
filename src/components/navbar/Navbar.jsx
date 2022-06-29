@@ -55,7 +55,8 @@ function Navbar() {
         </li>
         <li className="nav-item">
           <Link to="./deals" className="nav-links" onClick={closeMobileMenu}>
-            Deals <i className="fas fa-caret-down" />
+            Deals <i className="fa-solid fa-chevron-down" />
+            {/* fas fa-caret-down */}
           </Link>
           {dropdown && <Dropdown />}
         </li>

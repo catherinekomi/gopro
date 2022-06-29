@@ -1,27 +1,32 @@
 export const MenuItems = [
   {
-    title: "Cameras",
-    path: "/cameras",
+    title: "HERO10 Black Creator Edition",
+    path: "/HERO10creators",
     cName: "dropdown-link",
   },
   {
-    title: "Apps",
-    path: "/apps",
+    title: "HERO10  Black",
+    path: "/HERO10black",
     cName: "dropdown-link",
   },
   {
-    title: "Assessories",
-    path: "/assessories",
+    title: "HERO10 Black Bones",
+    path: "/HERO10bones",
     cName: "dropdown-link",
   },
   {
-    title: "Lifestyle Gear",
-    path: "/gear",
+    title: "HERO9 Black",
+    path: "/HERO9black",
     cName: "dropdown-link",
   },
   {
-    title: "GoPro Subscription",
-    path: "/subscription",
+    title: "HERO8 Black",
+    path: "/HERO8black",
+    cName: "dropdown-link",
+  },
+  {
+    title: "MAX",
+    path: "/MAX",
     cName: "dropdown-link",
   },
 ];
