@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo">
-        <img src={Logo} alt="GoPro Logo" />
+        <img src={Logo} className="gopro" alt="GoPro Logo" />
       </Link>
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"} />

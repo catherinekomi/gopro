@@ -1,19 +1,22 @@
 .navbar {
-  background: #111;
+  background: white;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  /* margin-left: -444px; */
 }
 
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+}
+
+.gopro {
+  height: 82px;
 }
 
 .fa-firstdraft {
@@ -23,7 +26,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -39,7 +42,7 @@
 }
 
 .nav-links {
-  color: white;
+  color: #111;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
@@ -51,7 +54,7 @@
 }
 
 .fa-bars {
-  color: #fff;
+  color: #111;
 }
 
 .nav-links-mobile {
@@ -88,6 +91,7 @@
   }
 
   .nav-links {
+    color: white;
     text-align: left;
     border-bottom: 1px solid #353535;
     box-shadow: 0 1px #585959;
@@ -112,14 +116,14 @@
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    left: 0;
+    transform: translate(50%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
   }
 
   .fa-times {
-    color: #fff;
+    color: #111;
     font-size: 2rem;
   }
 
