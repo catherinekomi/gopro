@@ -28,7 +28,7 @@ p {
 
 a {
   border-bottom: 4px solid transparent;
-  color: rgb(17, 17, 17);
+  color: #111;
   cursor: pointer;
   display: block;
   font-weight: 700;

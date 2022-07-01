@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import {
-  MenuItemsCamera,
-  MenuItemsAccessories,
-  MenuItemsApps,
-  MenuItemsGear,
-  MenuItemsDeals,
-} from "../data/MenuItemsCamera";
+import { MenuItemsApp } from "../data/MenuItemsApp";
 import { Link } from "react-router-dom";
-import "./dropdown.css";
+import "../navbar/dropdown.css";
 
-function Dropdown() {
+function DropdownApp() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -19,7 +13,7 @@ function Dropdown() {
         onClick={handleClick}
         className={click ? "dropdown-menu clicked" : "dropdown-menu"}
       >
-        {MenuItemsCamera.map((item, index) => {
+        {MenuItemsApp.map((item, index) => {
           return (
             <li key={index}>
               <Link
@@ -37,4 +31,4 @@ function Dropdown() {
   );
 }
 
-export default Dropdown;
+export default DropdownApp;

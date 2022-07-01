@@ -130,6 +130,11 @@
   text-decoration: none;
 }
 
+ol > li,
+ul > li {
+  line-height: 45px;
+}
+
 .nav-links:hover {
   border-bottom: 4px solid #0097d6;
   color: #0097d6;

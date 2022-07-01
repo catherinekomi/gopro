@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
-import Dropdown from "./Dropdown";
+import DropdownCamera from "../dropdownFunctions/DropdownCamera";
+import DropdownApp from "../dropdownFunctions/DropdownApp";
 import "./navbar.css";
 import Logo from "../../assets/goprologo.svg";
 
@@ -28,60 +29,71 @@ function Navbar() {
     }
   };
   return (
-    <nav className="navbar">
-      <Link to="/" className="navbar-logo">
-        <img src={Logo} className="gopro" alt="GoPro Logo" />
-      </Link>
-      <div className="menu-icon" onClick={handleClick}>
-        <i className={click ? "fas fa-times" : "fas fa-bars"} />
-      </div>
-      <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <li
-          className="nav-item"
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-        >
-          <Link to="./cameras" className="nav-links" onClick={closeMobileMenu}>
-            Cameras <i className="fa-solid fa-chevron-down" />
-          </Link>
-          {dropdown && <Dropdown />}
-        </li>
-        <li className="nav-item">
-          <Link to="./apps" className="nav-links" onClick={closeMobileMenu}>
-            Apps
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
-            to="./accessories"
-            className="nav-links"
-            onClick={closeMobileMenu}
+    <>
+      <nav className="navbar">
+        <Link to="/" className="navbar-logo">
+          <img src={Logo} className="gopro" alt="GoPro Logo" />
+        </Link>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li
+            className="nav-item"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
           >
-            Accessories
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="./gear" className="nav-links" onClick={closeMobileMenu}>
-            Lifestyle Gear
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
-            to="./subscription"
-            className="nav-links"
-            onClick={closeMobileMenu}
+            <Link
+              to="./cameras"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Cameras <i className="fa-solid fa-chevron-down" />
+            </Link>
+            {dropdown && <DropdownCamera />}
+          </li>
+          <li className="nav-item">
+            <Link to="./apps" className="nav-links" onClick={closeMobileMenu}>
+              Apps
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
           >
-            GoPro Subscription
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="./deals" className="nav-links" onClick={closeMobileMenu}>
-            Deals <i className="fa-solid fa-chevron-down" />
-            {/* fas fa-caret-down */}
-          </Link>
-        </li>
-      </ul>
-    </nav>
+            <Link
+              to="./accessories"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Accessories
+            </Link>
+            {dropdown && <DropdownApp />}
+          </li>
+          <li className="nav-item">
+            <Link to="./gear" className="nav-links" onClick={closeMobileMenu}>
+              Lifestyle Gear
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="./subscription"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              GoPro Subscription
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="./deals" className="nav-links" onClick={closeMobileMenu}>
+              Deals <i className="fa-solid fa-chevron-down" />
+              {/* fas fa-caret-down */}
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
 
