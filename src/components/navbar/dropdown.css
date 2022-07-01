@@ -1,7 +1,7 @@
 .dropdown-menu {
   width: 200px;
   position: absolute;
-  top: 80px;
+  top: 120px;
   list-style: none;
   text-align: start;
 }
@@ -25,6 +25,6 @@
   height: 100%;
   text-decoration: none;
   /* text-color: gray; */
-  color: white;
+  color: #111;
   padding: 16px;
 }
