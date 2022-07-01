@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { MenuItems } from "./MenuItems";
+import {
+  MenuItemsCamera,
+  MenuItemsAccessories,
+  MenuItemsApps,
+  MenuItemsGear,
+  MenuItemsDeals,
+} from "../data/MenuItemsCamera";
 import { Link } from "react-router-dom";
 import "./dropdown.css";
 
@@ -13,7 +19,7 @@ function Dropdown() {
         onClick={handleClick}
         className={click ? "dropdown-menu clicked" : "dropdown-menu"}
       >
-        {MenuItems.map((item, index) => {
+        {MenuItemsCamera.map((item, index) => {
           return (
             <li key={index}>
               <Link
